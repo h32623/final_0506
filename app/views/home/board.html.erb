@@ -1,0 +1,44 @@
+<html>
+    <head>
+        
+    </head>
+    
+    <body>
+    <!-- Navigation -->
+	            <nav class="navbar navbar-default navbar-fixed-top">
+	              <div class="container">
+	                <!-- Brand and toggle get grouped for better mobile display -->
+	                <div class="navbar-header">
+	                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                  </button>
+	                  <a href="/"><h3>법과사전</h3></a>
+	                  <!--<a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>-->
+	                </div>
+
+	                <!-- Collect the nav links, forms, and other content for toggling -->
+	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                  <ul class="nav navbar-nav navbar-right">
+	                    <li><a href="/region">지역별</a></li>
+	                    <li><a href="/field">분야별</a></li>
+	                    <li><a href="/profile">개인별</a></li>
+	                    <li><a href="/board">게시판</a></li>
+	                    <li><a href="/contact">문의</a></li>
+	                  </ul>
+	                </div><!-- /.navbar-collapse -->
+	              </div><!-- /.container -->
+	            </nav>
+	            <br><br><br><br><br>
+	            <a href = "/new">글쓰기</a> <hr>
+	            <% @Board.each do |p| %>
+	            <a href ="/show/<%= p.id %>">제목 : <%= p.title %></a> <br>
+	            작성자 : <%= p.editor %> <br>
+                내용 : <%= p.content %> <br>
+                <hr>
+	            <% end %> 
+
+    </body>
+</html>
