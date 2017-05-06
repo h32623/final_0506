@@ -1,0 +1,8 @@
+<form action="/update" method="POST">
+    <input type="hidden" name="id" value="<%= @view_post.id %>">
+    제목 : <input type="string" name="input_title" value = "<%= @view_post.title %>"> <br>
+    작성자 : <input type="string" name="input_editor" value = "<%= @view_post.editor %>"> <br> 
+    내용 : <input type="text" name="input_content" value = "<%= @view_post.content %>"git a > <br>
+    <input type="submit" value="수정하기!"> <br>
+
+</form>

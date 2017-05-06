@@ -15,7 +15,39 @@ Rails.application.routes.draw do
   
   post '/create' => 'home#create'
   
-  get '/show/:post_id' => 'home#show'
+  get '/show/:id'=>'home#show'
+  
+  post '/update' => 'home#update'
+  
+  get '/delete/:post_id' => 'home#delete'
+  
+  get '/edit/:id'=>'home#edit'
+  
+  get 'field_culture' => 'home#field_culture'
+  
+  get 'field_election' => 'home#field_election'
+  
+  get 'field_environment' => 'home#field_environment'
+  
+  get 'field_nursing' => 'home#field_nursing'
+  
+  get 'field_traffic' => 'home#field_traffic'
+  
+  get 'field_women' => 'home#field_women'
+
+  get 'seadaemun' => 'home#seadaemun'
+  
+  get 'seongbuk' => 'home#seongbuk'
+  
+  get 'nowon' => 'home#nowon'
+  
+  get 'youngsangu' => 'home#youngsangu'
+  
+  get 'donggakgu' => 'home#donggakgu'
+  
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

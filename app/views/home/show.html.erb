@@ -1,6 +1,13 @@
-<%= @view_post.title %>
-<%= @view_post.editor %>
-<%= @view_post.content %>
 
-<a href="/edit/<%= @view_post.id %>">[수정]</a>
-<a href="/delete/<%= @view_post.id %>">[삭제]</a>
+<div class="container" style="padding-top:50px;">
+    <h3> 제목: <%= @view_post.title %><br></h3>
+    <h4> 작성자: <%= @view_post.editor %><br></h4>
+    <h3>내용</h3>
+    <hr>
+    <%= @view_post.content %><br>
+    <hr>
+    <a href="/edit/<%= @view_post.id %>" style="float:right; padding-left:5pt; ">[수정]</a>
+    <a href="/delete/<%= @view_post.id %>" style="float:right;">[삭제]</a>
+    <br>
+    <a href="/board">돌아가기</a>
+</div>

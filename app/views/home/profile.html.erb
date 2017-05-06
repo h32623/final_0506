@@ -1,90 +1,138 @@
 <html>
-    <head>
-        
-    </head>
-    
-    <body>
-    <!-- Navigation -->
-	            <nav class="navbar navbar-default navbar-fixed-top">
-	              <div class="container">
-	                <!-- Brand and toggle get grouped for better mobile display -->
-	                <div class="navbar-header">
-	                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	<head>
+		
+	</head>
+
+
+	<body>
+	<!-- Navigation -->
+	
+    <header>
+    	<nav class="navbar navbar-default navbar-fixed-top">
+    		<div class="container">
+    			<div class="navbar-header">
+    				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 	                    <span class="sr-only">Toggle navigation</span>
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                  </button>
 	                  <a href="/"><h3>법과사전</h3></a>
-	                  <!--<a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>-->
-	                </div>
 
-	                <!-- Collect the nav links, forms, and other content for toggling -->
-	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	                  <ul class="nav navbar-nav navbar-right">
-	                   <li><a href="/region">지역별</a></li>
+	            </div>
+
+	            <!--Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/region">지역별</a></li>
 	                    <li><a href="/field">분야별</a></li>
 	                    <li><a href="/profile">개인별</a></li>
 	                    <li><a href="/board">게시판</a></li>
 	                    <li><a href="/contact">문의</a></li>
-	                  </ul>
-	                </div><!-- /.navbar-collapse -->
-	              </div><!-- /.container -->
-	            </nav>     
-<!--탭 시험용-->
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	
 
-    <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Library</a></li>
-          <li class="active">Data</li>
-    </ol>        
+	<div style="position: fixed; bottom: 5px; right: 5px;">
+		<a href="#header"><button>위로 가기</button></a>
+	</div>
     
-            <div>
-				<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a href="#">전체</a></li>
-			  <li role="presentation"><a href="#">ㄱ,ㄴ,ㄷ</a></li>
-			  <li role="presentation"><a href="#">ㄹ,ㅁ,ㅂ</a></li>
-			  <li role="presentation"><a href="#">ㅅ,ㅇ,ㅈ</a></li>
-			  <li role="presentation"><a href="#">ㅊ,ㅋ,ㅌ</a></li>
-			  <li role="presentation"><a href="#">ㅍ,ㅎ</a></li>
-			   </ul>    
-			</div> 
-			
-			
-			
-			
-			<div class="card" style="width: 20rem;">
-		     <img class="card-img-top" src="..." alt="Card image cap">
-		       <div class="card-block">
-		         <h4 class="card-title">이름</h4>
-		         <p class="card-text">지역구:</p>
-		         <p class="card-text">정당:</p>
-		         <p class="card-text">대표법안:</p>
-		         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  자세히
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        내용을 입력해보자
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+       <!--Nav tabs-->
+    <div class="container" style="padding-top: 15px;">
+	      <ul class="nav nav-tabs" role="tablist" >
+	        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">ㄱ,ㄴ,ㄷ</a></li>
+	        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">ㄹ,ㅁ,ㅂ</a></li>
+	        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">ㅅ,ㅇ,ㅈ</a></li>
+	        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">ㅊ,ㅋ,ㅌ</a></li>
+	        <li role="presentation"><a href="#asd" aria-controls="asd" role="tab" data-toggle="tab">ㅍ,ㅎ</a></li>
+	      </ul>
     </div>
-  </div>
+    
+    	            
+
+	
+	
+	<!-- Tab panes -->
+<!--      <div class="tab-content">-->
+      	
+      	
+    
+    
+    <!--프로필들-->
+    <div role="tabpanel" class="tab-pane active" id="home">			
+		<div class="container">
+	        <hr>
+	        <div class="row">
+	            <div class="col-lg-12">
+	                <h3>개인 프로필</h3>
+	            </div>
+	        </div>
+	
+	
+	<% @assems.each_with_index do |p, i| %>
+	
+	       	<div class="text-center">
+	       		
+				<div class="col-md-3 col-sm-6 hero-feature">
+					
+	                <div class="thumbnail">
+	                	
+	                    <!--프로필 사진 (800x500)-->
+	                    <img src="images/<%= p.man_key %>.jpg" style='width:500px;height:300px' alt="">
+	                    	<div class="caption">
+								<h3>이름 : <%= p.name %></h3>
+									<p>선거구 : <%= p.precinct %></p>
+	                       	 		<p>정당 : <%= p.party %></p>
+	                        		<!--<p>대표법안:</p>-->
+	                        	
+	                        	
+	                        		<p>
+	                                	<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal<%= i %>">자세히</button>
+	                                	<div class="modal fade" id="myModal<%= i %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	                                 	 	<div class="modal-dialog" role="document">
+	                                    	<div class="modal-content">
+	                                      		<div class="modal-header">
+	                                        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                                        		<h4 class="modal-title" id="myModalLabel"><%= p.name %></h4>
+	                                      		</div>
+	                                      		<div class="modal-body">
+	                                        	<%= p.precinct %> <br>
+	                                        	<%= p.party %> <br>
+	                                        	<%= p.elec_count %> <br>
+	                                        	<%= p.email %> <br>
+	                                        	<%= p.home_url %> <br>
+	                                        	<%= p.call_number %> <br>
+	
+	                                      		</div>
+	                                      		<div class="modal-footer">
+	                                        		<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+	                                      		</div>
+	                                    	</div>
+	                                  		</div>
+	                                	</div>                                        
+	                        		</p>
+	                    	</div>
+	                	</div>
+	            	</div>
+			</div>
+			
+			<% end %>
+	</div>
 </div>
-               </div>
-            </div>
-            
-    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
 </html>

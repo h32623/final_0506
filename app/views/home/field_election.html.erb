@@ -70,17 +70,18 @@
 	                </div><!-- /.navbar-collapse -->
 	              </div><!-- /.container -->
 	            </nav> 
-	<div>         
-  	            
-	</div>
+
+    
+
 	
 	    <!-- side bar -->
     <div id="wrapper">
         
         <!-- Sidebar -->
-        <div id="sidebar-wrapper" style="top: 70px; position:fixed;">
+        <div id="sidebar-wrapper" style="top: 70px;">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
+                    <!--<a href="#">법과사전</a>-->
                 </li>
                 <li>
                     <a href="/field_environment">환경 노동</a>
@@ -131,9 +132,9 @@
                 </div>
             </div>
         </div>
+      </div>  
         
-        
-    </div>
+   
 	
 	
 	
@@ -155,5 +156,30 @@
     <script src="js/wow.js"></script>
     <script src="js/script.js"></script>	
 	
+    <div class="container" style="padding-left:200pt">
+	    <p><h3>선거 정치 부분 법안</h3></p>
+    	<table class="table">
+          <thead class="thead-default">
+            <tr>
+              <th>국회의원 이름</th>
+              <th>법안 별명</th>
+            </tr>
+          </thead>
+          
+            <% @bills.each do |p| %>
+            <tbody>
+            <tr>
+                <td><%= p.assem.name %></td>
+                <td><%= p.sub_name %></td>
+            </tr>
+            </tbody>
+            <% end %>
+           
+          </tbody>
+        </table>
+    </div>
+    
+    
+    </div>
     </body>
 </html>
